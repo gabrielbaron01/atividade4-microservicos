@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="d-flex p-3">
+    <img src="assets/icons8-woman-blond-hair-48.png" alt="">
+    <h2>Clarice</h2>
+  </div>
+
+
+  <div class="card">
+    <div class="card-body">
+      <div class="chat-messages p-3" style="height: 300px; overflow-y: scroll;">
+        <div class="mb-2 justify-content: end"  *ngFor="let mensagem of mensage">
+          <img src="assets/icons8-homem-com-bigode-pele-média-48.png" alt="User" class="message-img">
+          <div class="badge bg-primary message-content">
+            {{ mensagem }}
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-11">
+          <textarea class="form-control" type="text" [(ngModel)]="newMensage" placeholder="Digite sua mensagem"></textarea>
+        </div>
+        <div class="col-1">
+          <button class="btn btn-primary" (click)="sendMesage()">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
